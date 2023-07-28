@@ -1,0 +1,32 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+
+}
+
+a{
+
+}
+
+header{
+    background-color: #FFF8F3;
+}
+.container{
+    max-width: 1180px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.header__inner{
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
