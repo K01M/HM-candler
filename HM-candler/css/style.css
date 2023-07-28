@@ -9,11 +9,17 @@ html{
 }
 
 body{
-
+    color: #000;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 a{
-
+    text-decoration: none;
+    color: inherit;
 }
 
 header{
@@ -29,4 +35,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.menu__list{
+    display: flex;
+    gap: 20px;
+}
+.menu__list-link{
+    text-transform: uppercase;
 }
