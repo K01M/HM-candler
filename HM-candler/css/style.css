@@ -22,6 +22,9 @@ a{
     text-decoration: none;
     color: inherit;
 }
+ul{
+    list-style: none;
+}
 
 header{
     background-color: #FFF8F3;
@@ -30,6 +33,20 @@ header{
     max-width: 1180px;
     padding: 0 10px;
     margin: 0 auto;
+}
+.menu__btn{
+    display: none;
+    width: 30px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+.menu__btn span{
+    height: 1px;
+    background-color: #7B6152;
+    width: 100%;
 }
 .header__inner{
     padding-top: 4px;
@@ -55,4 +72,103 @@ header{
     height: 20px;
     left: -23px;
     top: -3px;
+}
+
+.footer{
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__contacts{
+    display: flex;
+    width: 230px;
+    flex-direction: column;
+    gap: 17px;
+}
+.footer__social{
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 1000px) {
+    .container{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 900px){
+    .footer__inner{
+        flex-wrap: wrap;
+    }
+    .footer__contacts{
+        width: 100%;
+        align-items: center;
+        padding-top: 15px;
+    }
+}
+@media (max-width: 768px){
+    .phone::before{
+        width: 14px;
+        height: 14px;
+        left: -16px;
+        top: -2px;
+        background-size: cover;
+    }
+    body{
+        font-size: 10px;
+    }
+    .container{
+        max-width: 640px;
+    }
+}
+@media (max-width: 640px){
+    .container{
+        padding: 0 10px;
+    }
+    .header__menu-list{
+        padding: 20px 0;
+        position: absolute;
+        background-color: #7B6152;
+        color: #FFF8F3;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        left: 0;
+        right: 0;
+        top: 80px;
+        transform: translateX(-100%);
+        transition: transform .5s ease;
+        z-index: 5;
+    }
+    .header__menu-list.menu--open{
+        transform: translateX(0);
+    }
+    .menu__btn{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .header__menu{
+        order: 1;
+    }
+    .footer{
+        font-size: 14px;
+    }
+}
+@media (max-width: 500px){
+    .footer__inner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu__footer-list{
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+    }
+    .footer{
+        padding: 50px 0;
+    }
 }
