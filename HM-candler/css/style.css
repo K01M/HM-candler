@@ -11,7 +11,6 @@ html{
 body{
     color: #000;
     font-family: 'Comfortaa', cursive;
-    font-family: 'Yeseva One', cursive;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -26,7 +25,7 @@ ul{
     list-style: none;
 }
 
-header{
+.header{
     background-color: #FFF8F3;
 }
 .container{
@@ -34,14 +33,17 @@ header{
     padding: 0 10px;
     margin: 0 auto;
 }
+button{
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}
 .menu__btn{
     display: none;
     width: 30px;
     height: 25px;
-    border: none;
     background-color: transparent;
-    padding: 0;
-    border-radius: 0;
 }
 .menu__btn span{
     height: 1px;
@@ -73,6 +75,53 @@ header{
     left: -23px;
     top: -3px;
 }
+.main{
+    background-color: #FFF8F3;
+    overflow: clip;
+}
+.top{
+    padding-top: 40px;
+    padding-bottom: 150px;
+}
+.top__inner{
+    position: relative;
+}
+.top__content{
+    padding: 150px 0 250px;
+    width: 370px;
+}
+.top__title{
+    font-size: 30px;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 15px;
+}
+.top__text{
+    margin-bottom: 48px;
+}
+.top__buy{
+    padding: 18px 54px;
+    background-color: #FFBD59;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    transition: .5s ease;
+}
+.top__buy:hover{
+    background-color: #7B6152;
+    color: #FFF;
+    font-family: Comfortaa;
+    font-size: 18px;
+}
+.top__img{
+    position: absolute;
+    top: 0;
+    left: 240px;
+}
+
+
+
+
 
 .footer{
     padding-top: 40px;
@@ -94,9 +143,32 @@ header{
     gap: 15px;
 }
 
+
+
+
+
+
+
+
 @media (max-width: 1000px) {
     .container{
         padding: 0 20px;
+    }
+    .top__content{
+        width: 333px;
+        padding: 90px 0 70px;
+    }
+    .top__title {
+        font-size: 27px;
+    }
+    .top__text{
+        margin-bottom: 30px;
+    }
+    .top__img{
+        left: 300px;
+    }
+    .top__img-l{
+        width: 655px;
     }
 }
 @media (max-width: 900px){
@@ -122,6 +194,22 @@ header{
     }
     .container{
         max-width: 640px;
+    }
+    .top__content{
+        width: 230px;
+    }
+    .top__title{
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .top__text{
+        margin-bottom: 20px;
+    }
+    .top__img {
+        left: 225px;
+    }
+    .top__img-l {
+        width: 590px;
     }
 }
 @media (max-width: 640px){
@@ -170,5 +258,61 @@ header{
     }
     .footer{
         padding: 50px 0;
+    }
+    .
+}
+@media (max-width: 480px) {
+    .top{
+        padding-top: 0;
+        padding-bottom: 70px;
+    }
+    .top__content{
+        width: 180px;
+    }
+    .top__title{
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .top__text{
+        margin-bottom: 15px;
+        font-size: 8px;
+    }
+    .top__img {
+        left: 175px;
+        top: 25px;
+    }
+    .top__img-l{
+        width: 308px;
+    }
+    .top__buy{
+        padding: 14px 30px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 360px) {
+    .top{
+        padding-bottom: 0;
+    }
+    .top__content{
+        width: 200px;
+    }
+    .top__title{
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .top__text{
+        margin-bottom: 15px;
+        font-size: 10px;
+    }
+    .top__img {
+        left: 190px;
+        top: 35px;
+    }
+    .top__img-l{
+        width: 190px;
+    }
+    .top__buy{
+        padding: 14px 30px;
+        font-size: 10px;
     }
 }
