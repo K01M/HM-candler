@@ -39,6 +39,9 @@ button{
     padding: 0;
     border-radius: 0;
 }
+.title{
+    margin-bottom: 10px;
+}
 .menu__btn{
     display: none;
     width: 30px;
@@ -150,7 +153,7 @@ margin-bottom: 15px;
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: url(../images/about-4.png);
+    background-image: url(../images/section-decor.png);
     width: 22px;
     height: 30px;
 }
