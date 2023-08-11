@@ -65,6 +65,11 @@ button{
 }
 .title{
     margin-bottom: 10px;
+    font-family: Yeseva One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .menu__btn{
     display: none;
@@ -223,6 +228,51 @@ margin-bottom: 15px;
     margin-bottom: 27px;
 }
 
+.steps__list{
+    gap: 70px 25px;
+    counter-reset: number;
+}
+.steps__item{
+    display: flex;
+    gap: 25px;
+    list-style-type: none;
+    position: relative;
+}
+.steps__item::before{
+    counter-increment: number;
+    content: '0' counter(number);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 30px;
+    font-family: Yeseva One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #BEA495;
+}
+.steps__item--even::before{
+    left: auto;
+    right: 0;
+}
+.steps__item:nth-child(n+10)::before{
+    content: counter(number);
+}
+.steps__item-text{
+    flex-basis: 174px;
+    padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .footer{
@@ -249,9 +299,19 @@ margin-bottom: 15px;
 
 
 
-
-
-
+@media (max-width: 1050px) {
+    .steps__list {
+        gap: 37px 35px;
+        counter-reset: number;
+    }
+    .steps__item{
+        gap: 0 25px;
+    }
+    .section__inner {
+        display: grid;
+        grid-template-columns: 300px auto;
+    }
+}
 @media (max-width: 1000px) {
     .container{
         padding: 0 20px;
@@ -291,6 +351,10 @@ margin-bottom: 15px;
     .products__content{
         gap: 67px;
     }
+    .section__inner {
+        grid-template-columns: 190px auto;
+        gap: 0 10px;
+    }
 }
 @media (max-width: 900px){
     .footer__inner{
@@ -301,12 +365,23 @@ margin-bottom: 15px;
         align-items: center;
         padding-top: 15px;
     }
-    .section__inner{
-        grid-template-columns: 190px auto;
-        gap: 0 10px;
-    }
     .products__content{
         gap: 30px 16px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+    .steps__item-img{
+        width: 84px;
+        object-fit: cover;
+    }
+
+    .steps__list {
+        gap: 25px 35px;
+    }
+    .steps__item::before {
+        font-size: 20px;
     }
 }
 @media (max-width: 768px){
@@ -398,6 +473,9 @@ margin-bottom: 15px;
         font-size: 12px;
         margin-top: auto;
         padding: 10px 26px;
+    }
+    .steps__list {
+        gap: 15px 20px;
     }
 }
 @media (max-width: 640px){
@@ -522,6 +600,13 @@ margin-bottom: 15px;
     .about__inner{
         align-items: flex-end;
     }
+    .steps__item-text{
+        flex-basis: 70px;
+    }
+    .steps__item-img{
+        width: 70px;
+    }
+
 }
 @media (max-width: 360px) {
     .top{
