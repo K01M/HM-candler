@@ -132,6 +132,7 @@ button{
     margin-bottom: 48px;
 }
 .button__buy{
+    margin: 0 auto;
     padding: 18px 54px;
     background-color: #FFBD59;
     font-family: Comfortaa;
@@ -207,6 +208,10 @@ margin-bottom: 15px;
     width: 290px;
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
 }
 .products__item-img{
     margin-bottom: 8px;
@@ -263,6 +268,40 @@ margin-bottom: 15px;
     flex-basis: 174px;
     padding-bottom: 40px;
 }
+.courses__item-img{
+    position: relative;
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Yeseva One', cursive;
+}
+.courses__title{
+    background-color: #BEA495;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    top: 45%;
+}
+.courses__time{
+    background-color: #BEA495;
+    padding: 7px 10px;
+    position: absolute;
+    left: 0;
+    top: 60%;
+}
+.courses__time span{
+    font-family: Comfortaa;
+    font-size: 10px;
+}
+.courses__price{
+    position: absolute;
+    background-color: #BEA495;
+    padding: 19px 10px;
+    right: 0;
+    bottom: 2px;
+}
+
+
+
 
 
 
@@ -384,6 +423,47 @@ margin-bottom: 15px;
         font-size: 20px;
     }
 }
+@media (max-width: 800px){
+    .products__content{
+        gap: 30px 16px;
+    }
+    .products__item{
+        width: 210px;
+    }
+    .products__item-img{
+        margin-bottom: 6px;
+        width: 200px;
+    }
+    .products__item-title{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .products__item-price{
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    .products__item-text{
+        font-size: 8px;
+        margin-bottom: 18px;
+    }
+    .button__buy{
+        font-size: 12px;
+        margin-top: auto;
+        padding: 10px 26px;
+    }
+    .courses__title{
+        top: 0;
+        padding: 8px;
+    }
+    .courses__time{
+        top: 50%;
+        padding: 3px 5px;
+    }
+    .courses__price{
+        padding: 10px;
+        bottom: 2px;
+    }
+}
 @media (max-width: 768px){
     .phone::before{
         width: 14px;
@@ -446,33 +526,6 @@ margin-bottom: 15px;
     .section__inner{
         grid-template-columns: 190px auto;
         gap: 0 10px;
-    }
-    .products__content{
-        gap: 30px 16px;
-    }
-    .products__item{
-        width: 210px;
-    }
-    .products__item-img{
-        margin-bottom: 6px;
-        width: 200px;
-    }
-    .products__item-title{
-        font-size: 8px;
-        margin-bottom: 10px;
-    }
-    .products__item-price{
-        font-size: 12px;
-        margin-bottom: 7px;
-    }
-    .products__item-text{
-        font-size: 8px;
-        margin-bottom: 18px;
-    }
-    .button__buy{
-        font-size: 12px;
-        margin-top: auto;
-        padding: 10px 26px;
     }
     .steps__list {
         gap: 15px 20px;
@@ -606,7 +659,15 @@ margin-bottom: 15px;
     .steps__item-img{
         width: 70px;
     }
-
+    .products__item {
+        width: 150px;
+    }
+    .products__item-img{
+        width: 150px;
+    }
+    .courses__content-descr{
+        grid-template-columns: auto;
+    }
 }
 @media (max-width: 360px) {
     .top{
@@ -681,10 +742,5 @@ margin-bottom: 15px;
     .section__content-descr{
         gap: 40px 7px;
     }
-    .products__item {
-        width: 150px;
-    }
-    .products__item-img{
-        width: 150px;
-    }
+
 }
