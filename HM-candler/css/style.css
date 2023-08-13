@@ -334,12 +334,82 @@ margin-bottom: 15px;
     font-family: Comfortaa;
     font-size: 9px;
 }
+.rews__item{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 0 16px;
+}
+.rews__descr{
+    padding-right: 20px;
+}
+.rews__item-video{
+    position: relative;
+}
+.rews__item-btn{
+    background: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.rews__item-content{
+    padding-bottom: 70px;
+}
+.rews__item-sociallink{
+    margin-bottom: 15px;
+    height: 22px;
+    display: block;
+}
+.rews__item-title{
+    margin-bottom: 15px;
+    font-family: Yeseva One;
+    font-size: 16px;
+}
+.rews__item-text{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.rews__button{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+.rews__content{
+    padding-bottom: 110px;
+}
+.rews__slider{
+    width: 760px;
+    overflow: hidden;
+}
+.rews__content .swiper-pagination{
+    bottom: 50px;
+}
+.swiper-pagination-bullet{
+    background-color: #BEA495;
+    width: 53px;
+    height: 4px;
+    border-radius: 0;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #7B6152;
+}
 
-
-
-
-
-
+.certificates__slider{
+    width: 1135px;
+    overflow: hidden;
+}
+.certificates__descr{
+    margin-right: 20px;
+}
+.certificates__content{
+    padding-bottom: 114px;
+}
+.certificates__content .swiper-pagination{
+    bottom: 60px;
+    text-align: left;
+}
 
 
 
@@ -371,7 +441,20 @@ margin-bottom: 15px;
 
 
 
-
+@media (max-width: 1147px) {
+    .rews__title{
+        font-size: 35px;
+    }
+    .certificates__title{
+        font-size: 24px;
+    }
+    .certificates__content img{
+        width: 280px;
+    }
+    .certificates__slider{
+        width: 860px;
+    }
+}
 
 @media (max-width: 1080px) {
     .steps__list {
@@ -436,6 +519,64 @@ margin-bottom: 15px;
         gap: 0 10px;
     }
 }
+@media (max-width: 986px){
+    .rews__item-title{
+        font-size: 12px;
+        font-style: normal;
+    }
+    .rews__slider{
+        width: 430px;
+        margin: 0 auto;
+    }
+    .rews__item-text{
+        font-size: 10px;
+    }
+    .rews__item{
+        align-items: start;
+    }
+    .rews__item-img{
+        width: 200px;
+    }
+    .rews__item-btn img{
+        width: 50px;
+    }
+    .rews__item-sociallink img{
+        width: 15px;
+        margin-bottom: 10px;
+    }
+    .rews__content .swiper-pagination {
+        bottom: 36px;
+        left: 32%;
+        width: 125px;
+    }
+    .rews__content .swiper-pagination-bullet{
+        width: 23px;
+    }
+    .rews__content {
+        padding-bottom: 30px;
+    }
+    .rews__button {
+        padding: 10px 20px;
+    }
+    .certificates__content .swiper-pagination {
+        bottom: 40px;
+        left: 40%;
+        width: 125px;
+    }
+    .certificates__content .swiper-pagination-bullet{
+        width: 23px;
+    }
+    .certificates__content img {
+        width: 200px;
+    }
+    .certificates__slider {
+        width: 600px;
+    }
+    .certificates__content{
+        padding-bottom: 80px;
+    }
+}
+
 @media (max-width: 900px){
     .footer__inner{
         flex-wrap: wrap;
@@ -692,7 +833,29 @@ margin-bottom: 15px;
     .footer{
         padding: 50px 0;
     }
-    .
+    .rews__descr {
+        padding-right: 0;
+    }
+    .rews__item-content{
+        text-align: left;
+    }
+    .rews__item-title {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .rews__button {
+        position: absolute;
+        bottom: 28px;
+        right: 0;
+        font-size: 8px;
+    }
+    .rews__item-text {
+        font-size: 9px;
+    }
+    .certificates__slider {
+        width: 423px;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 480px) {
     .top{
@@ -774,6 +937,40 @@ margin-bottom: 15px;
         width: 205px;
     }
 
+}
+@media (max-width: 455px){
+    .rews__item {
+        grid-template-columns: auto;
+    }
+    .rews__item-content {
+        text-align: center;
+        width: 250px;
+        margin: 0 auto;
+    }
+    .rews__button {
+        position: unset;
+    }
+    .rews__content .swiper-pagination {
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .rews__item-img {
+        width: 250px;
+        margin-bottom: 12px;
+    }
+    .rews__item-text {
+        margin-bottom: 20px;
+    }
+    .rews__slider, .certificates__slider {
+        width: 360px;
+    }
+    .certificates__content .swiper-pagination {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 360px) {
     .top{
