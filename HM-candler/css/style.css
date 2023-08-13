@@ -411,13 +411,71 @@ margin-bottom: 15px;
     text-align: left;
 }
 
-
-
-
-
-
-
-
+.promo{
+    background-image: url("../images/promo.jpg");
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.promo__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.promo__text{
+    color: #FFF8F3;
+    font-family: Yeseva One;
+    font-size: 32px;
+    font-style: normal;
+    padding-left: 56px;
+}
+.promo__btn{
+    background-color: #FFBD59;
+    padding: 14px 25px 12px;
+    display: inline-block;
+    color: #272727;
+    min-width: 135px;
+    text-align: center;
+}
+.contacts{
+    padding: 150px 0 50px;
+}
+.contacts__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.form{
+    background-color: #FFF;
+    width: 664px;
+    padding: 75px 42px 67px;
+}
+.form__title{
+    margin-bottom: 60px;
+}
+.form__input{
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: block;
+    margin-bottom: 27px;
+    padding: 7px 10px;
+    color: #000;
+}
+.form__btn{
+    margin-top: 23px;
+}
+.form__input::placeholder{
+    color: #B3B3B3;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 .footer{
     padding-top: 40px;
@@ -517,6 +575,16 @@ margin-bottom: 15px;
     .section__inner {
         grid-template-columns: 190px auto;
         gap: 0 10px;
+    }
+    .promo__text{
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    .promo{
+        padding: 120px 0;
+    }
+    .contacts__img{
+        width: 335px;
     }
 }
 @media (max-width: 986px){
@@ -621,6 +689,9 @@ margin-bottom: 15px;
     }
     .team__item-descr {
         font-size: 8px;
+    }
+    .promo__text{
+        font-size: 15px;
     }
 }
 @media (max-width: 800px){
@@ -750,6 +821,23 @@ margin-bottom: 15px;
     }
     .team__item-box {
         left: 90px;
+    }
+    .promo__btn{
+        padding: 10px 35px;
+    }
+    .promo{
+        padding: 67px 0;
+    }
+    .contacts__img{
+        width: 187px;
+        object-fit: cover;
+    }
+    .form{
+        width: 440px;
+        padding: 30px 20px;
+    }
+    .form__title{
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 640px){
@@ -927,6 +1015,15 @@ margin-bottom: 15px;
     .courses__content-descr{
         grid-template-columns: auto;
     }
+    .promo{
+        padding: 42px 0;
+    }
+    .contacts{
+        padding: 50px 0;
+    }
+    .contacts__img{
+        display: none;
+    }
 }
 @media (max-width: 475px){
     .team__content {
@@ -1059,5 +1156,8 @@ margin-bottom: 15px;
     .team__item-box {
         width: 165px;
         left: 70%;
+    }
+    .promo__text{
+        font-size: 13px;
     }
 }
