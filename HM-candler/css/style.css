@@ -410,6 +410,48 @@ margin-bottom: 15px;
     bottom: 60px;
     text-align: left;
 }
+.accordeon{}
+.accordeon__item{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+}
+.accordeon__title{
+    padding: 17px 50px 17px 13px;
+    font-family: Yeseva One;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    position: relative;
+}
+.accordeon__title::after{
+    content: '';
+    background-image: url(../images/Vector.svg);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 26px;
+    top: 17px;
+    transition: .3s ease;
+}
+.accordeon__title--active::after{
+    transform: rotate(180deg);
+}
+.accordeon__text{
+    padding: 0 40px;
+    font-size: 14px;
+    opacity: 0;
+    max-height: 0;
+    transition: .3s ease;
+}
+.accordeon__text--visible{
+    opacity: 1;
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
 
 .promo{
     background-image: url("../images/promo.jpg");
@@ -534,6 +576,9 @@ margin-bottom: 15px;
     }
 }
 @media (max-width: 1000px) {
+    .title {
+        font-size: 16px;
+    }
     .container{
         padding: 0 20px;
     }
@@ -658,9 +703,6 @@ margin-bottom: 15px;
         gap: 30px 16px;
     }
 
-    .title {
-        font-size: 16px;
-    }
     .steps__item-img{
         width: 84px;
         object-fit: cover;
@@ -838,6 +880,12 @@ margin-bottom: 15px;
     }
     .form__title{
         margin-bottom: 20px;
+    }
+    .section{
+        padding-bottom: 50px;
+    }
+    .team, .about{
+        margin-bottom: 50px;
     }
 }
 @media (max-width: 640px){
@@ -1159,5 +1207,17 @@ margin-bottom: 15px;
     }
     .promo__text{
         font-size: 13px;
+    }
+    .accordeon__title{
+        font-size: 10px;
+    }
+    .accordeon__title::after{
+        width: 10px;
+        height: 10px;
+        background-size: contain;
+    }
+    .accordeon__text {
+        font-size: 10px;
+        text-align: left;
     }
 }
