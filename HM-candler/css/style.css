@@ -81,6 +81,18 @@ button{
     height: 1px;
     background-color: #7B6152;
     width: 100%;
+    transition: all .5s ease;
+}
+.active span:nth-child(1){
+    transform: translateY(14px) rotate(45deg);
+}
+.active span:nth-child(5){
+    transform: translateY(-10px) rotate(-45deg);
+}
+.active span:nth-child(2),
+.active span:nth-child(3),
+.active span:nth-child(4){
+    opacity: 0;
 }
 .header__inner{
     padding-top: 4px;

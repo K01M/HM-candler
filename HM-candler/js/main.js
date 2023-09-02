@@ -2,6 +2,7 @@ const menuBtn = document.querySelector('.menu__btn');
 const menuMobile = document.querySelector('.header__menu-list');
 
 menuBtn.addEventListener('click', ()=>{
+    menuBtn.classList.toggle( 'active');
     menuMobile.classList.toggle('menu--open');
 })
 
